@@ -8,7 +8,7 @@ var path = require('path'),
 
 // Allow Openshift to set default host and port
 var server_port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
-    server_ip_address = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+    server_ip_address = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 config = {
     // ### Production
