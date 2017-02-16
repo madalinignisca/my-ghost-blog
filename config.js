@@ -6,6 +6,10 @@
 var path = require('path'),
     config;
 
+// Allow Openshift to set default host and port
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
 config = {
     // ### Production
     // When running Ghost in the wild, use the production environment.
@@ -26,8 +30,8 @@ config = {
         },
 
         server: {
-            host: '127.0.0.1',
-            port: '2368'
+            host: server_ip_address,
+            port: server_port
         }
     },
 
