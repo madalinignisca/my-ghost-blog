@@ -1,0 +1,23 @@
+<div class="header-outer">
+	<div class="clearfix header-inner">
+		<header class="left header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<div class="header">
+				{{#if @blog.logo}}
+					<a class="title site-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+				{{else}}
+					<h1 class="title site-title"><a title="{{@blog.title}}" href='{{@blog.url}}'>{{{@blog.title}}}</a></h1>
+				{{/if}}
+			</div>
+		</header>
+
+		<ul class="right socialnetwork">
+			<li class="icon-facebook"><a href="http://facebook.com/facebook">Facebook</a></li>
+			<li class="icon-twitter"><a href="http://twitter.com/twitter">Twitter</a></li>
+			<li class="icon-pinterest"><a href="http://pinterest.com/pinterest">Pinterest</a></li>
+		</ul>
+
+		<nav class="navigation">
+			{{navigation}}
+		</nav>
+	</div>
+</div>

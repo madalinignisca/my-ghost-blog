@@ -1,0 +1,25 @@
+{{! Instagram feed}}
+<script>
+	var userFeed = new Instafeed({
+		get: 'user',
+		limit: '4',
+		userId: YOUR-USER-ID,
+		accessToken: 'YOUR-ACCESS-TOKEN' /* * * get your token at http://extensv.com/instagram * * */
+	});
+	userFeed.run();
+</script>
+
+
+{{! Flickr feed}}
+<script>
+	$('#flickr_wrap').jflickrfeed({
+		limit: 8,
+		qstrings: {
+			id: 'YOUR-USER-ID' /* * * generate your ID through idgettr.com * * */
+		},
+		itemTemplate: '<a class="flickr_badge_image" href="\{{link}}"><img src="\{{image_s}}" alt="\{{title}}" /></a>'
+	});
+</script>
+
+
+{{! Disqus comment count}}
